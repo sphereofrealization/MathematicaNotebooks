@@ -1,0 +1,686 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{New Benchmark}
+\author{Parker Emmerson}
+\date{December 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Struct and operator definitions:
+	•	struct IndexReal: This structure represents an n-dimensional array of real numbers. It has two fields:
+	◦	n: An integer representing the dimension of the array.
+	◦	entry: A pointer to an array of real numbers.
+	•	operator cast(int n, real x): This operator takes two arguments: an integer n representing the desired dimension and a real number x. It creates a new IndexReal object with dimension n and sets all entries to the value x.
+	•	operator cast(int i, real[] x): This operator takes two arguments: an integer i representing the dimension and an array of real numbers x. It checks if the length of x matches the dimension i. If so, it creates a new IndexReal object with dimension i and copies the values from x to its entries.
+Data structures and functions:
+	•	typedef int[] degree3curve: This defines a type degree3curve as an array of four integers.
+	•	Various variables of type degree3curve: These variables store different sequences of integers representing coefficients or properties of mathematical curves.
+	•	real[] alpha: This variable stores an array of two real numbers, likely representing the initial values for a curve.
+	•	IndexReal a =cast (alpha): This line creates a new IndexReal object named a and assigns the values from the alpha array to its entries.
+	•	void freal(arrowhelper ah, int y, int x, int t, ...): This function takes various arguments related to arrows and frames and is likely used for drawing arrows on a surface.
+	•	void mframe(degree3curve element,picture pic = currentpicture): This function takes a degree3curve object and a picture object as arguments and performs some operation related to the shape or properties of the curve.
+	•	Revolution iSights = revolution(...);: This line creates a Revolution object named iSights based on some calculations involving cubic real frames and the alpha variable.
+	•	add(itr, alpha.entry[0]/4,iSights,pen=DashEndPen);: This line adds some visual element to the iSights object based on the alpha values.
+	•	draw(planecircle(...), pen=red+Dotted+THICK, DrawBackEdges);: This line draws a circle on the iSights object with specific visual properties.
+	•	shipout(bbox(...));: This line seems to be related to exporting the graphical output.
+Overall, the code appears to be related to mathematical calculations and visualizations of curves and surfaces, specifically related to the concept of "degree-3 curves".
+However, without further context and understanding of the specific mathematical concepts involved, it's difficult to provide a more precise interpretation of the code.
+
+
+The $D=7$ case is unique: Compute $A_n := A_{n,1} \cup A_{n,2}$
+\[A_{n,1} = \left(\underbrace{\left(\dotsb \left[k_{0000100} \oplus k_{0000010}\right] \oplus k_{0000001}\right] \oplus k_{1000000}\dotsb\right) \oplus k_{0001010}
+\end{cases}
+A_{n,2} = \left(\underbrace{\left(\dotsb \left[k_{0000200} \oplus k_{0000020}\right] \oplus k_{0000002}\right] \oplus k_{1000000}\dotsb\right) \oplus k_{0001020}
+\end{cases}
+Then $A_n = \bigcup_{i=1}^n A_{i,1} \cup A_{i,2}$ is the causal barrier in $\partial\Omega$ for $D=7$. Enumerate bright points on~$\partial\Omega$ and plot $A_p$ in~$\partial\Omega$ and~$\partial V$. 
+
+
+Link the sites' patches to the causal barrier,
+$k_{i_1 \dotsb i_n} := \lim_{x : p_0^i (x) = \vec{p}_i} \mathfrak{s}(x)$.
+
+An optimized tessellation in~$\Omega$ looks like
+$q_{i_1 \dotsb i_m}$
+
+The causal barrier depicted in Figure~\eqref{fig:CausalBarrier} is crucial to understand the potential cost of every paving scheme in every hole configuration. The causal barrier is a vivid artifact of the discretization algorithm. For example, it can grow unboundedly large as the discretization parameter becomes smaller. The structure of the causal barrier, thus, unites the discretization algorithm with ideas of space filling curves and finite element meshes. In some sense it is a data structure that describes the global solution of the problem.
+
+The causal barrier guides the construction of computing the evolved constraint. Consider the rinfg $\left(y_1^{p_1,\dots}\oplus\right)$. The displacement field is $v=\left(r'\xlongequal{\eta\mapsto\xi}r+r'\right)'=\sum_j r'_j\xlongequal{}^{r^i=r^i(r^j)}r'_j(\frac{\partial\xi}{\partial r^i})_{r^i=r^i(r^j)}$. %Add superphantom
+
+\begin{lemma}
+
+\end{lemma}
+
+Let $A=\cup_i A_i=\cup_i \supset A_i=\cup_{X_i\in U_i} X_i$. There is a subset of $A_i's$ whose union is~$A_i$. It is guaranteed $A_i's$ \emph{existence} because there are infinetely many points in $(CartesianProducts)$.
+
+We define a concept of \emph{larger} residue sets~$R_i$ of~$W_i$, depicted in Figure~\eqref{fig:larger}. 
+
+The complementary cells $\bar{U_i}=A\backslash U_i=\bar{\cup_j U_i}=...
+
+
+
+A list of relations characterize the blocks in the causal barrier as a set of larger or a set of minor neighborhoods:
+-~$\minautrel{k}{k}$
+-~$\residue{k}{k+1}$
+
+Introducing an alternative basis of causal influence allows to define~$T_n$ as a union of minimal tetrads; these tetrads are not Clifford algebra valued.
+The $\xi$~cover on $\quad \rackset{\useorient[n}]_{\useorient[*]} \quad \buildrel\xi\over{\rightarrow} \quad \Omega_{T_n} \quad \buildrel\omega_{using}\over{\rightarrow} \quad \Omega$
+\begin{equation}
+\xymatrix{
+ & (T_n) \ar@{->}[dd]_{\rotatebox[origin=c]{90}{function of}\quad  \xi} \\
+ \rule[10pt]{120pt}{1pt} \\
+(\Omega_{T_n}) \ar@{->}[dd]_{\rotatebox[origin=c]{90}{vectorful}\qquad\searrow \quad \xi\mapsto\omega } \\
+\rule[20pt]{120pt}{1pt} \\
+|\Omega|_{T_n} = \Omega
+}
+\end{equation}
+
+
+
+correct latex above for proper display in overleaf: 
+
+\begin{equation}
+\xymatrix{
+ & (T_n) \ar@{->}[dd]_{\rotatebox[origin=c]{90}{function of}\quad  \xi} \\
+ \rule[10pt]{120pt}{1pt} \\
+(\Omega_{T_n}) \ar@{->}[dd]_{\rotatebox[origin=c]{90}{vectorful}\qquad\searrow \quad \xi\mapsto\omega } \\
+\rule[20pt]{120pt}{1pt} \\
+|\Omega|_{T_n} = \Omega
+}
+\end{equation}
+\begin{equation}
+\xymatrix{ & (T_i) \ar@{->}[dd]_{\equiv_{R_i}} \\
+\rule[10pt]{80pt}{1pt} \\
+(\Omega_A) \ar@{->}[dd]_{\simeq \xi} \\
+\rule[20pt]{80pt}{1pt} \\
+\Omega }
+\end{equation}
+
+The function $\xi$ factors through the positions of points in~$\Omega$ and can be restricted to~$T_n$; we have shown that the image consists of quadratic functions $\sim f(\vec{x})= \vec{x}^2$. All functions~$\varphi_i(\vec{0},\vec{\xi}) = (\xi-\xi')^2$ define the quadratic functions. The  $\bar{\Omega}$ is the whole manifold of computed positions, depicted in Figure~\ref{fig:abundance}, which is about a cubic meter thick. The function~$f_1(\vec{x}) = k\cdot \vec{x}\big|_{x_i=0}$, where~$k$ is a multiplier, is linear. This means that for some positions~$\vec{x}$,~$k$
+space outside of the manifold of computed positions. For some simple choices of positions~$\vec{x}$, we observe a diminishing frequency. We may choose either a set~$\varphi_k$ of rational functions in four variables or to join those rational functions with some spacer; one simple spacer is the function~${(x_{\perp y}^i,b_{\perp b}^a,\lambda_i,\lambda_j)}$.
+
+\begin{figure}
+\begin{tikzpicture}
+\coordinate (Origin) at (0,0);
+\coordinate (XAxisMin) at (-2.5,0);
+\coordinate (XAxisMax) at (5,0);
+\coordinate (YAxisMin) at (0,-2.5);
+\coordinate (YAxisMax) at (0,5);
+%Beta coordinate transformation matrix
+
+\draw [thin, gray,-latex] (XAxisMin) -- (XAxisMax);% Draw x axis
+\draw [thin, gray,-latex] (YAxisMin) -- (YAxisMax);% Draw y axis
+%labeling the axes
+
+\node [right] at (XAxisMax) {$x^2$};
+\node [right] at (YAxisMax) {$y^2$};
+
+\draw [thick,-latex] (Origin) -- (3,4) node [above left] {$~\Omega\setminus\partial\Omega$};
+\draw [thick,-latex] (Origin) -- (0,3) node [below right] {$U_i$};
+\draw [thick,-latex] (Origin) -- (3,0) node [below right] {$U_i$};
+\end{tikzpicture}
+\caption{Causal barrier that is critical for the computation of $u(\vec{x},\xi)$, the Laplace domain tensor function, rp. space-direction~$\eta$,~$rp_x$ and~$rp_y$~$(\eta_1, \eta_2, \dots)$~$B_i$ points. Universal plot with identity matrix relation and coordinates \prot For example~$\xi_1 = x^2_4$; $x^2$ = either~$x^2$ and or chop tensor.~$garbage$}\label{fig:CausalBarrier}
+\end{figure}
+
+\rule[0pt]{3cm}{0.5pt}
+
+\section{The Disc Enabled manifold}\label{sec:DiscEnabledManifold}
+Let us compute two layers of the disc enabled manifold of lattice points.  
+Define lattice points  modulo two for two dimensions in two spacetime step by~$|^{\mathfrak{s}}\mathfrak{s}$ and such that the representation theory pair of parameters and time
+now reads $|^{\ai[n]}\ai[n]$
+
+The previously discussed focus on the simulation of continual flow and the associated geometry implied by PCA techniques significantly differs from our demands
+on power and abilities of computational machinery. We demand a great deal of power for images creation. It is sufficient to let $V$ denote the computational
+ kernel of a Lanczos algorithm to determine an orthogonal matrix to some whitworth normal form. 
+From a sampling point of view, we make two critical observations based on PCA:
+ (i)~Sub sorting~PCA sub sorting enables us to calibrate on material dispersion and measure the spectral compression by counting
+  the number of nodal mosaics that successively accumulate to the rendering process; 
+ (ii)~Despite a sufficiently small cutoff fixity, familiar  lattice structures are abnormal to PCA. 
+
+In general, for a tall operation we want a good accounting of formulated mechanics. This challenge has usability in simulation domains.
+By~\cite{foo} obligation, some other operations that work are its successors or successors to predecessors.
+\begin{itemize}
+\item We solve for the reduced multindex polynomial time by simply stating the pointwise transformations in simulation. 
+\item We unsolve~\cite{UnschedBP} by solving for all points in Intent.
+\item We then find credible solvers that do things like clean the graph of AndCat.
+\end{itemize}
+We claim that the tall to superfine configurations is a way to demarcate a neighborhood graphically regularly, e.g. upright-centered, in the arc length world.
+
+The order of operations that follow from the dual in the CPU are hard to distinguish between
+$x^{(\,+1,\,0)}_y=x^{\,(1,0,\,0)}_y$
+$\left(x^{\,(1,0,\,1)}_y\right)'$ and $z^{\,(0,0,1)}_y$. The discrete curvature may be a way to eliminate races as efficiently as floors, walls and corridors. The xyspace corner represents a variety of  scalar maps; a pertinent cocredit, for instance, $x^{(1,0)}_z$, ticks the clock xray map comonotonic borrows of the orthomodular completion group $\binom{P}_k^{nGDX}$ for all vectorfields $G$. In spaces with dependencies Theorems
+We can do many things with cool computation.,~e.g. semi-abstraction~s type algebra which obfuscates graph traversal times for human solvers and integral solutions:
+\begin{itemize}
+\item Markov Monads and Semi~Markov Monads mark impossible changes of integrity in protocol.
+\item The very structure of $N_i$ interfaces is indubitable from a continuity point of view.
+\item Int~$CC_i = 0$ implies an nonmodularity (in 2040) to the problem of sensativity and supersensativity. Constraint Failure over the continuum.
+\end{itemize}
+
+\vfill
+\begin{figure}[hpbc]
+\centering
+\begin{asy}
+// This all works well
+// Awesome part code up geometric intuitions using just any former nook we like
+// +===============+
+// |               |
+// |               |
+// |               |
+// |      .m       |
+// |      /|\      |
+// |       |       |
+// |      V V       |
+// |     e  Hdx     |
+// |    /^+--xX     |
+// |   /^  /        |
+// |   | <  .+Pn    |
+// |   |<   ^^      |
+// |   |<DB |       |
+// |   |     +p     |
+// |   \     |---|+
+// |    \---|   +  |
+// |       =+p|--|-|
+// |       |        |
+// |       \---LAY--|
+// |               |
+// |               |
+// +===============+
+settings.outformat = "pdf";
+import three;
+import algebraic_plane_curve_degree3;
+import math;
+unitsize(1.7cm);
+currentprojection=orthographic(camera=(0,0,1), up=cross(Y));
+real sc=1.01, trans=-0.1;
+
+  // Code for introducing indices to n-array Real
+  struct IndexReal{
+    int n;
+    real[] entry;
+    }
+  IndexReal operator cast(int n, real x) {
+    IndexReal ix;
+    ix.n = n; ix.entry = new real[n];
+    for(int i=0;i<n;++i) ix.entry[i] = x;
+    return ix;
+    }
+  IndexReal operator cast(int i, real[] x) {
+    IndexReal ix;
+    ix.n = x.length; ix.entry = new real[x.length];
+    return ix;
+    }
+  // Initial curve
+  real[] alpha = { 1,1 };
+  IndexReal a =cast (alpha);
+
+  // elegant codomain
+  typedef int[] degree3curve;
+  degree3curve dbp2     = {2,1,1,1};
+  degree3curve dbo2     = {1,1,1,1};
+  degree3curve bpd2     = {2,1,1,1};
+  degree3curve bop2     = {1,1,1,0};
+  degree3curve mop2     = {0,1,1,0};
+  degree3curve bap2w0_1 = {1,1,1,1};
+  degree3curve bap2w1_0 = {1,1,1,1};
+  degree3curve bxp2     = {2,1,0,1};
+  degree3curve bxop     = {1,1,0,0};
+  degree3curve bxxp     = {2,1,0,1};
+  degree3curve xop2     = {1,0,1,0};
+  degree3curve xxop     = {1,0,0,1};
+  degree3curve bao2     = {0,1,0,1};
+  degree3curve bao3     = {0,1,0,1};
+  degree3curve bdo3     = {0,1,0,1};
+  degree3curve bouselry = {1,1,1,1};// chicaniern
+  degree3curve bofn1010 = {0,1,1,0};
+  degree3curve bofn2020 = {1,0,1,1};
+  degree3curve bop2zryo = {1,1,1,1};// bian ryow
+  degree3curve bacucatright={2,2,1,0}; // cucapture : embedded in the cocuboctahedron
+  degree3curve bap2w2     = {2,2,1,1};
+
+  a.entry = {1,1};
+
+  IndexReal alpha;
+  degree3curve element;
+
+  void freal(arrowhelper ah, int y, int x, int t,
+    plane_frame frame,
+    //ficture fig,
+    picture fig,
+    real small_r){
+      x=x+t;y=y-t;
+      label(fig, "(-"+string(x)+",%"+string(y)+")"+'=',(-t,y),W);
+      label(fig, Ludwig.engnot(x)*wylong(x), (x, y-t));
+      ah.setup(frame, fig, operator cast(2, {-x,y}), operator cast(2, { y,-x}));
+      arrow(ah.src-frame.xmin+trans*ah.dirmin, ah.src, fig, p = small_r+TRANSLATE(-trans*ah.dirmin));
+      arrow(ah.dst-frame.xmin+trans*ah.dirmin, ah.dst, fig, p = small_r+TRANSLATE(-trans*ah.dirmin));
+      }
+  // gaussian curvature, running mudflow on surfaces
+  void mframe(degree3curve element,picture pic = currentpicture){
+    //rename coated surface instead of set k
+    //rename alpha for all space
+    int inno=2;
+    int y=0;
+    int xdeno=0;
+    freal(arrow,  xdeno, inno, 0, pic,0.04);
+    Enumformat = "start from the top: ~2.61369017\\un{\,s.}";
+    y=1;
+    freal(arrow,  xdeno,        y, 1, pic,0.04);
+    xdeno=-1;
+    freal(arrow, xdeno, y, 0, pic,0.04);
+    }
+  // Method turns and method giant sweeps
+  Revolution iSights = revolution(cyclic(cubicrealframe() {
+    return (1, 1) * p1..tension8..(1 + 1, 1 + 0) * p1;
+  }).ipp(null, alpha),1.01,100); // a good tp
+  add(itr, alpha.entry[0]/4,iSights,pen=DashEndPen);
+  draw(planecircle(cyclic(iSights.opp), iSights.opp), pen=red+Dotted+THICK, DrawBackEdges);
+  shipout(bbox(0.01cm,invisible,iSights,fillo,yellow));
+\end{asy}
+\caption{Shape the Arc Length
+%
+\begin{equation}
+\frac{\max\left({{_\tau}\vec{a}_{rp_i}}\right) r_i=R \lor \min\left({{_\tau}\vec{a}_{rp_i}}\right)
+\end{equation}
+
+}~\label{fig:abundance}
+\end{figure}
+\vfill
+
+By to the benchmarkable topology of~$(\Omega,d)$, we show
+\end{document}
+
+
+Examples:
+
+
+// +===============+
+// |               |
+// |               |
+// |               |
+// |      .m       |
+// |      /|\      |
+// |       |       |
+// |      V V       |
+// |     e  Hdx     |
+// |    /^+--xX     |
+// |   /^  /        |
+// |   | <  .+Pn    |
+// |   |<   ^^      |
+// |   |<DB |       |
+// |   |     +p     |
+// |   \     |---|+
+// |    \---|   +  |
+// |       =+p|--|-|
+// |       |        |
+// |       \---LAY--|
+// |               |
+// |               |
+// +===============+
+\n\n\n\
++===============+\
+\n|               |\
+\n|               |\
+\n|               |\
+\n|      .m       |\
+\n|      /|\\      |\
+\n|       |       |\
+\n|      V V       |\
+\n|     e  Hdx     |\
+\n|    /^+--xX     |\
+\n|   /^  /        |\
+\n|   | <  .+Pn    |\
+\n|   |<   ^^      |\
+\n|   |<DB |       |\
+\n|   |     +p     |\
+\n|   \\     |---|+\
+\n|    \\---|   +  |\
+\n|       =+p|--|-|\
+\n|       |        |\
+\n|       \\---LAY--|\
+\n|               |\
+\n|               |\
+\n+===============+\n\n\n")
+
+# +===============+
+# |               |
+# |               |
+# |               |
+# |      T        |
+# |      o        |
+# |     x O       |
+# |   /^+---x     |
+# |  | / /        |
+# |  ||<  .+ED    |
+# |  |P    ^      |
+# |  |< B /       |
+# |  |   +^m      |
+# |  \\  |   |  + |
+# |   \\---|---|-| \
+# |          D  = p|
+# |           |   |
+# |  \--LAY---/   |
+# |               |
+# | ←.→     /       |
+# +===============+
+"\n+===============+\
+\n|               |\
+\n|               |\
+\n|               |\
+\n|      T        |\
+\n|      o        |\
+\n|     x O       |\
+\n|   /^+---x     |\
+\n|  | / /        |\
+\n|  ||<  .+ED    |\
+\n|  |P    ^      |\
+\n|  |< B /       |\
+\n|  |   +^m      |\
+\n|  \\  |   |  + |\
+\n|   \\---|---|-| \\\
+\n|          D  = p|\
+\n|           |   |\
+\n|  \\--LAY---/   |\
+\n|               |\
+\n| ←.→     /       |\
+\n+===============+\n\n\n")
+
+# +===============+
+# |               |
+# |               |
+# |  <LAMBDA       |
+# |   <ZFLDL       |
+# |     <HARVEST   |
+# |^---------------+
+#     λx.x
++===============+
+|               |
+|               |
+|  <-LAMBDA       |
+|   <-ZFLDL       |
+|     <-HARVEST   |
+|^---------------+
+    λx.x
++===============+
+\n\n``` scheme
+(lambda (x) x)
+```\n\n"
+
+# +======================+
+# |   __________________ |
+# |  /                   |
+# | /     <HARVEST        |
+# |/                     |
+# |                      |
+# |                      |
+# |                      |
+# |                      |
+# |              /\      |
+# |             / *|     |
+# |            / /        |
+# +======================+
+#            a
++======================+
+\n\n|   __________________ |
+|  /                   |
+| /     <-HARVEST        |
+|/                     |
+|                      |
+|                      |
+|                      |
+|                      |
+|              /\      |
+|             / *|     |
+|            / /        |
++======================+
+           a\n\n"
+
+# +======================+
+# |    __________________ |
+# |  /                     |
+# /     <HARVEST           |
+# /_                       |
+# | ____________           |
+# _______________          |
+# ______________           |
+# ______________       /\  |
+# _____________________/*\_
++======================+
+\n\n\n|    __________________ |
+|  /                     |
+/     <-HARVEST           |
+/_                       |
+| ____________           |
+_________________          |
+______________           |
+_____________       /\  |
+____________________/*\_ \n\n
+
+# +======================+
+# |  /\                   |
+# | /**\              <BETA|
+# |/    \                   |
+# |_______________________|
+# +==================____+
+# |  |                                  |
+# |  +================================+ |
+# |  |                                |||
+# |  |HARVEST                        |||
+# |  +================================+ |
+# |                       /\               |
+# |                      /*\               |
+# |                     / __ \              |
+# |                    / _______\          |
+# |                   / ________ \         |
+# +================================+       |
+# |=|++++++++++++++++++++++++++++++|       |
+# \=/                             \_/       |
+#        MIRACLE/ATEXTSTORY
+
++======================+
+|  /\                   |
+| /**\              <-BETA|
+| |/    \                   |
+|_______________________|
++==================____+
+|  |                                  |
+|  +================================+ |
+|  |                                |||
+|  |<-HARVEST                       |||
+|  +================================+ |
+| ---                    /\               |
+|    ---                /*\               |
+|      ---              / __ \              |
+|         ---          / _______\          |
+|            ---       / ________ \         |
++================================+       |
+|=|++++++++++++++++++++++++++++++|       |
+\=/                             \_/       |
+       Miracle-A-Text-Story  Make a Miracle by Wiping Them out\n\n"
+
++--------------------+
+|                  X |
+|                 /XX |
+|                /XXXX
+|       <C>     /XXXXX|
+|   _          /XXXXXX|
+|  (_)       /XXXXXXXX|
+|   ||     /XXXXXXXXXX|
+|   ||   /XXXXXXXXXXXXX|
+|   ||/XXXXXXXXXXXXXXXX|
+|   ||XXXXXXXXXXXXXXXXX|
+|   |XXXXXXXXXXXXXXXXXX|
+|   /XXXXX XXXX XXX XXX|
+|  /XXXXX   NICE   XXXX|
+| /XXXXX     M8     XXX|
+| |____________________|
++----------------------+
+                           XXXX
++--------------------+
+|                  X |
+|                 /XX |
+|                /XXXX
+|       <C>     /XXXXX|
+|   _          /XXXXXX|
+|  (_)       /XXXXXXXX|
+|   ||     /XXXXXXXXXX|
+|   ||   /XXXXXXXXXXXXX|
+|   ||/XXXXXXXXXXXXXXXX|
+|   ||XXXXXXXXXXXXXXXXX|
+|   |XXXXXXXXXXXXXXXXXX|
+|   /XXXXX XXXX XXX XXX|
+|  /XXXXXL O V EL Y XXX|
+| /XXXXXF R I E N D S XXX|
+| |____________________|
++----------------------+
+                           M8 by MiracleDaphine"
+
+#S T A S I
+
+# +===============+
+# |               |
+# |               |
+# |      <NASH>   |
+# |      \ /      |
+# |       .       |
+# |       |       |
+# |      /\       |
+# |     //\\\\    |
+# |    /(x< >x)\  |
+# |    \/-----\/  |
+# |               |
+# |   +===============+
+# |   |        +========+===|     |
+# |   |        |   /\   |   |     |
+# |   |        |__/  \__|   |     |
+# |   |            \|/       |    |
+# |   |            |         |    |
+# |   |       /\   |   /\    |    |
+# |   |      //\\\\| //\\\\  |     |
+# |   |     /(x< >x)\ /(x< >x)\   |
+# |   |     \/-----\/ \/-----\/   |
+# |   |                           |
+# |   |    MAKE A SILLY PUTTY     |
+# |   +===========================+
+# |      ---------------   |
+# |         War is fun      |
+# | -------------------------
+#  CODE IS THE SCRAP OF FLESH
+# +===============+
+# |.D            |
+# |..            |
+# +-)         <ARG|
+# |_|L==  =  ====|
+# |   |         o|
+# |       |>¬   o|
+# |      \| |  =====|
+# |      //\"///----|
+# +===============+
+#  Argue To Death Cf. Nash Crash Dune"
+
+
+
+# +===============+
+# |               |
+# |               |
+# |      <LOP>    |
+# |     / \       |
+# |     ( )       |
+# |      Y        |
+# |               |
+# |               |
+# |               |
+# |   <LOOP>      |
+# |               |
+# |   {ERROR}     |
+# |   {______}    |
+# |  <Could not>  |
+# |   {connect}   |
+# |   {to node}   |
+# +===============+
+
+"\n\n+===============+\n\
+|               |\n\
+|               |\n\
+|      <-LOP>    |\n\
+|     / \\       |\n\
+|     ( )       |\n\
+|      Y        |\n\
+|               |\n\
+|               |\n\
+|               |\n\
+|   <-LOOP>      |\n\
+|               |\n\
+|   {-ERROR-}     |\n\
+|   {-______-}    |\n\
+|  <-COULD NOT->  |\n\
+|   {-CONNECT-}   |\n\
+|   {-TO NODE-}   |\n\
++===============+\n\n
+```javascript
+const LOP = () => {
+  while (true) {
+    // take the ping and turn it into nothing
+    LOOP(ping => {});
+  }
+}
+```\n\n"
+
+#  /=======\
+# |   <c>   |
+# |         |
+# +------j------+
+# | Bottom Line |
+# +-------------+
+
+"\n /=======\\\n\
+|   <-C->   |\n\
+|         |\n\
++------j------+\n\
+| Bottom Line |\n\
++-------------+\n\n" 
+
+
+#include <iostream> 
+using namespace std; 
+
+int main()
+{
+ 
+   // Print a top border for the isogram rectangle 
+   cout << "+===============+" << endl; 
+
+   // Print the top section (the roof) 
+   cout << "|               |" << endl; 
+   cout << "|               |" << endl; 
+   cout << "|               |" << endl; 
+
+   // Print the middle section (the center of the isogram) 
+   cout << "|      .m       |" << endl; 
+   cout << "|      /|\\      |" << endl; 
+   cout << "|       |       |" << endl; 
+   cout << "|      V V       |" << endl; 
+   cout << "|     e  Hdx     |" << endl; 
+   cout << "|    /^+--xX     |" << endl; 
+   cout << "|   /^  /        |" << endl; 
+   cout << "|   | <  .+Pn    |" << endl; 
+   cout << "|   |<   ^^      |" << endl; 
+   cout << "|   |<DB |       |" << endl; 
+   cout << "|   |     +p     |" << endl; 
+   cout << "|   \\     |--|+  |" << endl; 
+   cout << "|    \\---|   +  |" << endl; 
+   cout << "|       =+p|--|-|" << endl; 
+   cout << "|       |        |" << endl; 
+   cout << "|       \\---LAY--|" << endl; 
+
+
+   // Print the bottom section (the base of the isogram) 
+   cout << "|               |" << endl; 
+   cout << "|               |" << endl; 
+   cout << "+===============+" << endl; 
+
+   return 0;
+}
+ 
